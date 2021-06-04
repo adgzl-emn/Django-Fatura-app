@@ -1,0 +1,49 @@
+{% extends "faturalarapp/base.html" %}
+
+{% block title %}
+  HOME PAGE
+{% endblock title %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid  bg-secondary">
+    <div class="container">
+      <h1 class="display-4 text-light"><center>Faturalarım</center></h1>
+      <p class="lead"><center></center></p>
+      <div class="text-center">
+        <a class="btn btn-outline-success" href="{% url 'create' %}" role="button">Yeni Fatura Ekle</a>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+
+  <table class="table" align="center">
+    <thead>
+      <tr align="center">
+       <th scope="col">id</th>
+       <th scope="col">Kullanıcı Adı</th>
+       
+    </thead>
+    <tbody>
+    
+        {% for user in user_list %} 
+       
+            <tr align="center">
+                <td>{{ user.id }}</td>
+                 <td>{{ user.username }}</td>
+            </tr>
+             
+               
+          
+  
+        {% endfor %}
+    </tbody>
+  </table>
+  
+<footer>
+  <center><p>D-30 TEZ ÖDEVİ</p></center>
+</footer>
+</div>
+  
+
+{% endblock content %}

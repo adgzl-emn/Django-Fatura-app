@@ -1,0 +1,58 @@
+{% extends "faturalarapp/base.html" %}
+
+{% block title %}
+  Create PAGE
+{% endblock title %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-info"><center>Faturalarım</center></h1>
+      <p class="lead"><center></center></p>
+      
+     <div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label text-info">Fatura Adı</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="baslik">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label text-info">Ücret</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="fiyat">
+              </div>
+            </div>
+             <div class="form-group row">
+              <div class="col-sm-2 text-info">Son Ödeme Tarihi</div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input type="date" class="form" name="tarih">
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-2 text-info">Ödendi mi??</div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="odendi" >
+                  <label class="form-check-label text-info" >
+                    Evet
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" name="kullanici" value ="{{user.id}}" class="btn btn-success">Listeye Ekle</button>
+              </div>
+            </div>
+          </form>
+     </div>
+
+    </div>
+  </div>
+  
+{% endblock content %}

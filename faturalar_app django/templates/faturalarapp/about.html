@@ -1,0 +1,100 @@
+{% extends "faturalarapp/base.html" %}
+
+{% block title %}
+  HOME PAGE
+{% endblock title %}
+
+{% block content %}
+
+{% load static %}
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+    .isimbutton {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+</head>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-info"><center>Sende mi ay sonu nereye gitti param diyorsun!</center></h1>
+	  <h3 class="display-5 text-info"><center>Nereye ne zaman abone olduğun hakkında bir fikrin yok mu?</center></h3>
+	  <h1 class="display-6 text-info"><center>O zaman doğru yerdersin!</center></h1>
+	  <h1 class="display-4 text-info"><center>Şimdi üye ol ve fatura takibini kolaylaştır.</center></h1>
+      <p class="lead"><center></center></p>
+     </div>
+<center>
+
+	<div class="container">
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/admin.png' %}"  style="width:100%">
+        <p class="title">Utku Karaman</p>
+        <p><button class="isimbutton"><a href="#">1900004390</a></button></p>
+      </div>
+
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/admin.png' %}"  style="width:100%">
+        <p class="title">Emre Cem Tan</p>
+        <p><button class="isimbutton"><a href="#">1900002762</a></button></p>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static 'images/admin.png' %}"  style="width:100%">
+        <p class="title">Mehmet Emin Adıgüzel</p>
+        <p><button class="isimbutton"><a href="#">1900004072</a></button></p>
+      </div>
+    </div>
+</div>
+</center>
+
+</div>
+
+{% endblock content %}
