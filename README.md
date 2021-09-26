@@ -1,5 +1,5 @@
 # Django-ToDo-app
-Django ile admin ve kullanıcı girişli Fatura ödeme app 
+Django kullanıcı girişli Fatura ödeme app 
 
 ![image](https://user-images.githubusercontent.com/81260686/120846517-e692e280-c57a-11eb-92bf-d99247fdb19f.png)
 
